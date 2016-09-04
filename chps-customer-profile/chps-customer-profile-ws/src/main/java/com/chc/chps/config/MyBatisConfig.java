@@ -38,7 +38,6 @@ public class MyBatisConfig implements TransactionManagementConfigurer {
 		bean.setDataSource(dataSource);
 		bean.setTypeAliasesPackage("com.chc.chps.model");
 
-		// 添加XML目录
 		ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
 		try {
 			bean.setMapperLocations(resolver.getResources("classpath:mapper/*.xml"));

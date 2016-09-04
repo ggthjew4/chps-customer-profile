@@ -3,6 +3,10 @@ package com.chc.chps.exception;
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.Response;
 
+/**
+ * This CustomerNotFoundException is for Jersey RESTful service.
+ * @author kerrigan
+ */
 public class CustomerNotFoundException extends WebApplicationException {
 
 	private static final long serialVersionUID = 5257045362608108032L;
