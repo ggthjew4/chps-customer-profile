@@ -32,8 +32,7 @@ public class ApplicationTests {
 
 	@Test
 	public void tokenKeyEndpointWithSecret() {
-		assertEquals(
-				HttpStatus.OK,
+		assertEquals(HttpStatus.OK,
 				new TestRestTemplate("user", "password").getForEntity(
 						"http://localhost:" + port + "/oauth/authorize?response_type=token&client_id=my-trusted-client&scope=read", String.class).getStatusCode());
 	}
