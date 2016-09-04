@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: vanilla
+  datasource:
+        name: test
+        url: jdbc:oracle:thin:@10.211.55.3:1521:XE
+        username: rock
+        password: rock
+        type: org.springframework.jdbc.datasource.DriverManagerDataSource
+        driver-class-name: oracle.jdbc.OracleDriver
+        filters: stat
+        maxActive: 20
+        initialSize: 1
+        maxWait: 60000
+        minIdle: 1
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: select 'x'
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        poolPreparedStatements: true
+        maxOpenPreparedStatements: 20
+management:
+  context_path: /admin
+security:
+  user:
+    password: password
+logging:
+  level:
+    # org.springframework.security: DEBUG
