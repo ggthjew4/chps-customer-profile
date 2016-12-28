@@ -42,7 +42,7 @@ public class AuthorizationConfig extends AuthorizationServerConfigurerAdapter {
 			          .scopes("read", "trust")
 			          .resourceIds(ResourceConfig.RESOURCE_ID)
 			          .refreshTokenValiditySeconds(20000000)
-			          .redirectUris("https://tw.yahoo.com")
+			          .redirectUris("https://www.getpostman.com/oauth2/callback")
 			          .secret("secret123")
 		          .and()
 			          .withClient("my-client-with-secret")
@@ -58,7 +58,7 @@ public class AuthorizationConfig extends AuthorizationServerConfigurerAdapter {
 			          .scopes("read", "write", "trust")
 			          .accessTokenValiditySeconds(20000)
 			          .refreshTokenValiditySeconds(20000)
-			          .redirectUris("https://tw.yahoo.com");
+			          .redirectUris("https://www.getpostman.com/oauth2/callback");
 	}
 
 }

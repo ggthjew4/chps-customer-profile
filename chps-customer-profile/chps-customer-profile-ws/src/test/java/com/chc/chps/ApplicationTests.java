@@ -14,7 +14,6 @@ import org.springframework.test.context.web.WebAppConfiguration;
 
 import com.chc.chps.application.Application;
 
-@RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Application.class)
 @WebAppConfiguration
 @IntegrationTest("server.port=0")
@@ -36,7 +35,7 @@ public class ApplicationTests {
 				new TestRestTemplate("user", "password").getForEntity(
 						"http://localhost:" + port + "/oauth/authorize?response_type=token&client_id=my-trusted-client&scope=read", String.class).getStatusCode());
 	}
-
-
+	
+	
 
 }
